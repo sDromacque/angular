@@ -9,11 +9,6 @@
     "test": "ng test",
     "pretty-quick": "pretty-quick"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.0",
