@@ -8,9 +8,18 @@ import { HomeComponent } from './com/home/home.component';
 import { AboutComponent } from './com/about/about.component';
 import { NavbarComponent } from './com/navbar/navbar.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { FooterComponent } from './com/footer/footer.component';
+import { ListShopComponent } from './com/list-shop/list-shop.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, NavbarComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    NavbarComponent,
+    FooterComponent,
+    ListShopComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, LeafletModule],
   providers: [],
   bootstrap: [AppComponent],

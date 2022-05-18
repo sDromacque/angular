@@ -38,6 +38,9 @@ export class HomeComponent implements AfterViewInit {
     let defaultLatitude = environment.mapbox.defaultLatitude;
     let defaultLongitude = environment.mapbox.defaultLongitude;
 
+    let titi = 4;
+    console.log(titi);
+
     this.map = L.map('map').setView([defaultLatitude, defaultLongitude], 5);
     L.tileLayer(
       `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${token}`,
