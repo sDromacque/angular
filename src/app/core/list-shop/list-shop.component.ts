@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Shop } from './IShop';
+import { Shop } from '../models/IShop';
 
 const COUNTRIES: Shop[] = [
   {

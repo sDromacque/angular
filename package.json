@@ -8,7 +8,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "pretty-quick": "pretty-quick",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "compodoc": "npx compodoc -p tsconfig.doc.json",
+    "compodoc:build": "compodoc -p tsconfig.doc.json",
+    "compodoc:build-and-serve": "compodoc -p tsconfig.doc.json -s",
+    "compodoc:serve": "compodoc -s"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +26,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "@asymmetrik/ngx-leaflet": "^13.0.2",
+    "@compodoc/compodoc": "^1.1.19",
     "@ng-bootstrap/ng-bootstrap": "^12.1.1",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
