@@ -27,14 +27,29 @@ const COUNTRIES: Shop[] = [
     population: 1409517397,
   },
 ];
+
 @Component({
   selector: 'app-list-shop',
   templateUrl: './list-shop.component.html',
   styleUrls: ['./list-shop.component.scss'],
 })
-export class ListShopComponent implements OnInit {
-  constructor() {}
-  countries = COUNTRIES;
+export class ListShopComponent {
+  page = 1;
+  pageSize = 4;
+  collectionSize = COUNTRIES.length;
+  countries: Shop[] | undefined;
 
-  ngOnInit(): void {}
+  constructor() {
+    this.refreshCountries();
+  }
+
+  refreshCountries() {
+    this.countries = COUNTRIES.map((country, i) => ({
+      id: i + 1,
+      ...country,
+    })).slice(
+      (this.page - 1) * this.pageSize,
+      (this.page - 1) * this.pageSize + this.pageSize
+    );
+  }
 }

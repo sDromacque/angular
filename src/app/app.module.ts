@@ -10,6 +10,7 @@ import { NavbarComponent } from './core/navbar/navbar.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { FooterComponent } from './core/footer/footer.component';
 import { ListShopComponent } from './core/list-shop/list-shop.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { ListShopComponent } from './core/list-shop/list-shop.component';
     FooterComponent,
     ListShopComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, LeafletModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    LeafletModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
