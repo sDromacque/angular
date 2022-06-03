@@ -1,0 +1,26 @@
+<h2>Sign up</h2>
+<form (ngSubmit)="register()" [formGroup]="userForm">
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input formControlName="email" class="form-control" type="email" />
+    <val-errors controlName="email" label="The email"></val-errors>
+  </div>
+  <div>
+    <label>Username</label><input formControlName="username" />
+    <val-errors controlName="username" label="The email"></val-errors>
+  </div>
+  <div formGroupName="passwordForm">
+    <div>
+      <label>Password</label
+      ><input type="password" formControlName="password" />
+      <val-errors controlName="password" label="The password"></val-errors>
+
+      <div>Strength: {{ passwordStrength }}</div>
+    </div>
+    <div>
+      <label>Confirm password</label
+      ><input type="password" formControlName="confirm" />
+    </div>
+  </div>
+  <button type="submit" [disabled]="userForm.invalid">Register</button>
+</form>

@@ -10,7 +10,12 @@ import { NavbarComponent } from './core/navbar/navbar.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { FooterComponent } from './core/footer/footer.component';
 import { ListShopComponent } from './core/list-shop/list-shop.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ShopDetailComponent } from './core/shop-detail/shop-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddShopComponent } from './core/add-shop/add-shop.component';
+import { ErrorMessageFormComponent } from './core/shared/error-message-form/error-message-form.component';
+import { ValdemortModule } from 'ngx-valdemort';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,9 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     ListShopComponent,
+    ShopDetailComponent,
+    AddShopComponent,
+    ErrorMessageFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +35,10 @@ import { FormsModule } from '@angular/forms';
     NgbModule,
     LeafletModule,
     FormsModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ValdemortModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
